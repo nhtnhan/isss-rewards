@@ -21,6 +21,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AddIcon from '@material-ui/icons/Add';
 import HelpIcon from '@material-ui/icons/Help';
+import Link from '@material-ui/core/Link';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 
 const drawerWidth = 240;
@@ -152,18 +153,26 @@ const CustomNavbar = (props) => {
         </div>
         <Divider />
         <List>
-          <ListItem>
-              <ListItemIcon><CardGiftcardIcon /></ListItemIcon>
+          <Link href="/home">
+            <ListItem>
+              <ListItemIcon>
+                <CardGiftcardIcon />
+              </ListItemIcon>
               <ListItemText primary= "Rewards" />
-          </ListItem>
-          <ListItem>
-              <ListItemIcon><AddIcon /></ListItemIcon>
-              <ListItemText primary= "Add Points" />
-          </ListItem>
-          <ListItem>
-              <ListItemIcon><HelpIcon /></ListItemIcon>
-              <ListItemText primary= "Help" />
-          </ListItem>
+            </ListItem>
+          </Link>
+          <Link href="/home">
+            <ListItem>
+                <ListItemIcon><AddIcon /></ListItemIcon>
+                <ListItemText primary= "Add Points" />
+            </ListItem>
+          </Link>
+          <Link href="/help">
+            <ListItem>
+                <ListItemIcon><HelpIcon /></ListItemIcon>
+                <ListItemText primary= "Help" />
+            </ListItem>
+          </Link>
         </List>
         <Divider />
       </Drawer>
