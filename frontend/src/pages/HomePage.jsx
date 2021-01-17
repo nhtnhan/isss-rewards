@@ -6,9 +6,9 @@ import RewardsView from '../components/RewardsView';
 const HomePage = (props) => {
   return (
     <div>
-      <CustomNavbar></CustomNavbar>
-      <PointsView></PointsView>
-      <RewardsView></RewardsView>
+      <CustomNavbar/>
+      <PointsView/>
+      <RewardsView/>
     </div>
   )
 }
