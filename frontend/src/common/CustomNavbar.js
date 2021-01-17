@@ -12,7 +12,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -41,6 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     root: {
       display: 'flex',
+      marginBottom: theme.spacing(10),
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
@@ -112,7 +112,6 @@ const CustomNavbar = (props) => {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {

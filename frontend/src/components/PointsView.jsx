@@ -5,7 +5,6 @@ const PointsView = () =>{
   return (
     <div>
         <h1>CURRENT POINTS</h1>
-        
     </div>
   )
 }

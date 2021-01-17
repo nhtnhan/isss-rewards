@@ -7,8 +7,10 @@ const HomePage = (props) => {
   return (
     <div>
       <CustomNavbar></CustomNavbar>
-      {/* <PointsView></PointsView>
-      <RewardsView></RewardsView> */}
+      <PointsView></PointsView>
+      <RewardsView></RewardsView>
+      <PointsView></PointsView>
+
     </div>
   )
 }
