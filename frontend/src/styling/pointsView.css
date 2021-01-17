@@ -1,0 +1,31 @@
+.pointsContainer {
+  /* margin-top: 50px; */
+  background-color: #64dfdf;
+  height: 150px;
+  margin-left: 42%;
+  margin-right: 42%;
+  border-style: solid;
+  border-color: #64dfdf;
+  border-radius: 6%;
+}
+.pointsTitle {
+  margin: auto;
+  font-size: 7rem;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+.pointsFont {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #184d47;
+  font-family: 'Lato', sans-serif;
+}
+.starSection {
+  margin-top: 50px;
+  text-align: center;
+}

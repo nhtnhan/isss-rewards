@@ -8,6 +8,7 @@ import App from './App';
 import Splash from './pages/Splash';
 import createStore from "./store/createStore";
 import history from './common/history';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore();

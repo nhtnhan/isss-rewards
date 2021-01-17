@@ -7,7 +7,7 @@ export const fetchUserInfo = (userId) => async dispatch => {
         const mockData = {
             userId: 'userId-1234',
             userName: 'Joe',
-            points: '1282',
+            points: '4000',
         }
 
         dispatch({type: GET_USER_INFO, payload: {userInfo: mockData}});
@@ -15,5 +15,4 @@ export const fetchUserInfo = (userId) => async dispatch => {
         console.log(error);
     }
 }
-
 

@@ -5,8 +5,8 @@ import PointsView from '../components/PointsView';
 const HomePage = (props) => {
   return (
     <div>
-      <CustomNavbar></CustomNavbar>
-      <PointsView></PointsView>
+      <CustomNavbar/>
+      <PointsView/>
     </div>
   )
 }
