@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import FrontPage from '../images/front-page.jpg';
 import Logo from '../images/isss_logo.png';
 import '../styling/splash.css';
@@ -8,11 +8,12 @@ import TC from './TermsAndConditions.jsx';
 
 
 const Splash = props => {
-    window.onload = () => TC.handleClickOpen();
-    
+    const termsAndConditionsRef = useRef();
+    window.onload = () => termsAndConditionsRef.current.handleClickOpen();
+
     return (
         <div>
-            <TC/>
+            <TC ref={termsAndConditionsRef} />
             <div className="container">
                 <img src={Logo} className="logo" alt="The logo"/>
                 <img src={FrontPage} className="front-page" alt="This is us celebrating"/>
@@ -25,7 +26,6 @@ const Splash = props => {
         </div>
     )
 }
-
 
   
 

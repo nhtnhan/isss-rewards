@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, Component} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -39,48 +39,58 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
+export default class CustomizedDialogs extends Component {
 
-  const handleClickOpen = () => {
-    console.log("Hello");
-    setOpen(true);
-  };
+    state = {
+      open: false
+    }
   
-  const handleClose = () => {
-    setOpen(false);
-  };
+    handleClickOpen = () => {
+      this.setState({
+        open: true,
+      })
+    };
+    
+    handleClose = () => {
+      this.setState({
+        open: false,
+      })
+    };
+  
+    render() {
+      return(
+        <div>
+        {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+          Open dialog
+        </Button> */}
+        <Dialog onClose={this.handleClose} aria-labelledby="customized-dialog-title" open={this.state.open}>
+          <DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
+            Terms and Conditions
+          </DialogTitle>
+          <DialogContent dividers>
+            <Typography gutterBottom>
+              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+              in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </Typography>
+            <Typography gutterBottom>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
+              lacus vel augue laoreet rutrum faucibus dolor auctor.
+            </Typography>
+            <Typography gutterBottom>
+              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
+              scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
+              auctor fringilla.
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button autoFocus onClick={this.handleClose} color="primary">
+              Accept
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+      );
+    }
+  }
+  
 
-  return(
-    <div >
-      {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open dialog
-      </Button> */}
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Terms and Conditions
-        </DialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Accept
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
-  );
-}
