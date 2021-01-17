@@ -14,10 +14,17 @@ class UserProfile(models.Model):
 
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
-    print(instance, sender)
+    print(instance)
+    print(instance.id)
+    print(instance.username)
+    
     if created:
         UserProfile.objects.create(user=instance)
+        #instance.name = SocialAccount.extra_data['name']
+        #instance.id = SocialAccount.extra_data['id']
 
+        #data = UserProfile.objects.filter(uid=0)
+        #print(data)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):

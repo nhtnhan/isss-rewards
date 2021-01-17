@@ -20,6 +20,8 @@ def fetch_rewards(request):
         all_rewards = request.GET.get('all_rewards')
         print(all_rewards)
         if all_rewards == 'true':
+            x = UserProfile.objects.filter(id=8)
+            print(x)
             reward_data = Reward.objects.all()
             serializer = RewardsSerializer(reward_data, many=True)
             return JsonResponse({

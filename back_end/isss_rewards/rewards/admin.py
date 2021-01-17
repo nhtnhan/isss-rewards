@@ -12,7 +12,7 @@ class Reward_HistoryAdmin(admin.ModelAdmin):
     list_display = ("username", "reward_redeemed", "date")
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ("name", "balance")
+    list_display = ("user", "name", "uid", "balance")
 
 class Reward_CodeAdmin(admin.ModelAdmin):
     list_display = ("username", "code","max_times_redeemed")
