@@ -1,11 +1,12 @@
 import React from 'react';
+import CustomNavbar from '../common/CustomNavbar'
 
 const HomePage = props => {
-    return (
-        <div>
-            <h1>HomePage</h1>
-        </div>
-    )
+  return (
+    <div>
+      <CustomNavbar></CustomNavbar>
+    </div>
+  )
 }
 
 export default HomePage;
