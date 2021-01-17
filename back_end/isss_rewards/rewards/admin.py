@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Reward, Reward_History, User, Reward_Code
+from .models import Reward, Reward_History, UserProfile, Reward_Code
 
 
 class RewardAdmin(admin.ModelAdmin):
@@ -12,11 +12,11 @@ class Reward_HistoryAdmin(admin.ModelAdmin):
     list_display = ("username", "reward_redeemed", "date")
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ("username", "balance")
+    list_display = ("name", "balance")
 
 class Reward_CodeAdmin(admin.ModelAdmin):
     list_display = ("username", "code","max_times_redeemed")
 
 admin.site.register(Reward, RewardAdmin)
 admin.site.register(Reward_History, Reward_HistoryAdmin)
-admin.site.register(User, UserAdmin)
+admin.site.register(UserProfile, UserAdmin)

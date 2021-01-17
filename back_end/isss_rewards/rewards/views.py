@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from rest_framework.decorators import api_view
-from .models import Reward
+from .models import Reward, UserProfile
 from .serializers import RewardsSerializer
 import json
 
