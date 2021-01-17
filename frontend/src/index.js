@@ -10,9 +10,10 @@ import * as serviceWorker from './serviceWorker';
 
 import App from './App';
 import HomePage from './pages/HomePage';
-import Splash from './pages/Splash';
+// import LoginPage from './pages/Splash';
 
 import { loadState, saveState } from './localStorage';
+import Splash from './pages/Splash';
 
 // const persistdState = loadState();
 // const store = createStore(
