@@ -5,7 +5,9 @@ from django.db import models
 # class for users and their rewards points
 class User(models.Model):
     username = models.TextField()
+    uid = models.IntegerField(default="0")
     balance = models.FloatField()
+
 
 # class for rewards and their prices
 class Reward(models.Model):
