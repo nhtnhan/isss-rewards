@@ -9,8 +9,6 @@ const HomePage = (props) => {
       <CustomNavbar></CustomNavbar>
       <PointsView></PointsView>
       <RewardsView></RewardsView>
-      <PointsView></PointsView>
-
     </div>
   )
 }
